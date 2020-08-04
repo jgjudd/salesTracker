@@ -1,5 +1,5 @@
 ﻿import React, { useState } from 'react';
-import { Table } from 'reactstrap';
+import { Table, Collapse } from 'reactstrap';
 import Sale from './Sale';
 
 //const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -18,11 +18,25 @@ const data = [
 
 const SalesList = () => {
     const [filterValue, setFilterValue] = useState(null);
-    
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
         <>
             <h1 className='page-header'>Previous Sales</h1>
             <input onChange={(e) => setFilterValue(e.target.value)} />
+            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Cancel' : 'New Sale'}</button>
+            <Collapse isOpen={isOpen}>
+                <label>Product</label>
+                <input />
+                <label>Sales Person</label>
+                <input />
+                <label>Customer</label>
+                <input />
+                <label>Date</label>
+                <input />
+
+                <button>Add Sale</button>
+            </Collapse>
             <Table>
                 <thead>
                     <tr>
