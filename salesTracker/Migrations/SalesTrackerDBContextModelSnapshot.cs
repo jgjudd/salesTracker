@@ -96,31 +96,31 @@ namespace salesTracker.Migrations
 
                     b.ToTable("Products");
                 });
-            modelBuilder.Entity<Product>()
-                .HasData(
-                    new Product
-                    {
-                        ProductID = 0,
-                        CommissionPercentage = 0,
-                        FirstName = "John",
-                        Manufacturer = "John Deer",
-                        PurchasePrice = 99,
-                        Quantity = 3,
-                        SalesPrice = 125,
-                        Style = "slick"
-                    },
-                    new Product
-                    {
-                        ProductID = 1,
-                        CommissionPercentage = 0,
-                        FirstName = "Jane",
-                        Manufacturer = "Jane Deer",
-                        PurchasePrice = 99,
-                        Quantity = 3,
-                        SalesPrice = 155,
-                        Style = "slicker"
-                    }
-                );
+            //modelBuilder.Entity<Product>()
+            //    .HasData(
+            //        new Product
+            //        {
+            //            ProductID = 0,
+            //            CommissionPercentage = 0,
+            //            FirstName = "John",
+            //            Manufacturer = "John Deer",
+            //            PurchasePrice = 99,
+            //            Quantity = 3,
+            //            SalesPrice = 125,
+            //            Style = "slick"
+            //        },
+            //        new Product
+            //        {
+            //            ProductID = 1,
+            //            CommissionPercentage = 0,
+            //            FirstName = "Jane",
+            //            Manufacturer = "Jane Deer",
+            //            PurchasePrice = 99,
+            //            Quantity = 3,
+            //            SalesPrice = 155,
+            //            Style = "slicker"
+            //        }
+            //    );
 
             modelBuilder.Entity("salesTracker.Entities.Sale", b =>
                 {

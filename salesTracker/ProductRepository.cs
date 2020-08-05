@@ -5,6 +5,16 @@ namespace salesTracker.Entities
 {
     public class ProductRepository
     {
+        public void SeedProducts()
+        {
+            using (SalesTrackerDBContext context = new SalesTrackerDBContext())
+            {
+                Product One = new Product();
+                context.Products.Add(One);
+                context.SaveChanges();
+            }
+        }
+    
         public List<Product> GetAllProducts()
         {
             using (SalesTrackerDBContext context = new SalesTrackerDBContext())
