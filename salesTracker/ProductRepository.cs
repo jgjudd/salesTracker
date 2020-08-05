@@ -9,8 +9,10 @@ namespace salesTracker.Entities
         {
             using (SalesTrackerDBContext context = new SalesTrackerDBContext())
             {
-                Product One = new Product();
-                context.Products.Add(One);
+                foreach(var x in TestProduct.TestProducts)
+                {
+                    context.Add(x);
+                }
                 context.SaveChanges();
             }
         }

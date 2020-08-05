@@ -5,7 +5,7 @@ namespace salesTracker.Entities
 {
     public class Product : IEnumerable
     {
-        public Product(int ProductID, string FirstName, string Manufacturer, string Style, float PurchasePrice, float SalesPrice, int Quantity, decimal CommissionPercentage)
+        public Product(int? ProductID, string FirstName, string Manufacturer, string Style, float PurchasePrice, float SalesPrice, int Quantity, float CommissionPercentage)
         {
             this.ProductID = ProductID;
             this.FirstName = FirstName;
@@ -18,14 +18,14 @@ namespace salesTracker.Entities
         }
 
         [Key]
-        public int ProductID { get; set; }
+        public int? ProductID { get; set; }
         public string FirstName { get; set; }
         public string Manufacturer { get; set; }
         public string Style { get; set; }
         public float PurchasePrice { get; set; }
         public float SalesPrice { get; set; }
         public int Quantity { get; set; }
-        public decimal CommissionPercentage { get; set; }
+        public float CommissionPercentage { get; set; }
 
         public IEnumerator GetEnumerator()
         {
