@@ -3,6 +3,7 @@ namespace salesTracker.Entities
 {
     public class SalesPerson
     {
+        public int SalesPersonID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }

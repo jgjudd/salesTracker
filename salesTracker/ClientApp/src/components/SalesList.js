@@ -64,8 +64,7 @@ const SalesList = () => {
                                     return true
                                 }
                             }
-                        )
-                        .map(
+                        ).map(
                             x => <Sale id={x.Product} details={x} />
                         )
                     }

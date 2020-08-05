@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { ListGroupItem, Collapse } from 'reactstrap';
 
-const Product = ({ id, info }) => {
+const Product = ({ id, details }) => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <ListGroupItem>

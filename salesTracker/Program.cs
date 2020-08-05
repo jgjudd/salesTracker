@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using salesTracker.Entities;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.EntityFrameworkCore;
 
 namespace salesTracker
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using salesTracker.Entities;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace salesTracker.Controllers
@@ -11,11 +11,12 @@ namespace salesTracker.Controllers
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
-        // GET: api/values
+        ProductRepository repo = new ProductRepository();
+        // GET: api/Product
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Product> GetAllProducts()
         {
-            return new string[] { "value1", "value2" };
+            return repo.GetAllProducts();
         }
 
         // GET api/values/5
